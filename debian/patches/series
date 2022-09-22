@@ -1,0 +1,4 @@
+0002-Remove-gemspec-git-ls-files.patch
+0003-Ignore-code-coverage-test.patch
+0005-Use-i18n-gem-instead-of-wikicloth-i18n.patch
+0007-Require-wikicloth-in-examples.patch

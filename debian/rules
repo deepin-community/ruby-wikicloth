@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+#
+# Uncomment to ignore all test failures (but the tests will run anyway)
+#export DH_RUBY_IGNORE_TESTS=all
+#
+# Uncomment to ignore some test failures (but the tests will run anyway).
+# Valid values:
+#export DH_RUBY_IGNORE_TESTS=ruby1.8 ruby1.9.1 require-rubygems
+#
+# If you need to specify the .gemspec (eg there is more than one)
+#export DH_RUBY_GEMSPEC=gem.gemspec
+
+%:
+	dh $@ --buildsystem=ruby --with ruby
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf doc
+
+override_dh_auto_build:
+	dh_auto_build
+	# build documentation
+	rdoc lib
+
+override_dh_auto_install:
+	dh_auto_install
+	# remove extra license file
+	rm -f debian/ruby-wikicloth/usr/lib/ruby/vendor_ruby/wikicloth/extensions/lua/COPYING
+	# remove bundled jquery.js
+	rm -f debian/ruby-wikicloth/usr/share/doc/ruby-wikicloth-doc/html/js/jquery.js
+
+override_dh_compress:
+	dh_compress -O--buildsystem=ruby --exclude=.wiki

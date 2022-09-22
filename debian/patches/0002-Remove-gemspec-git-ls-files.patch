@@ -1,0 +1,23 @@
+From: Per Andersson <avtobiff@gmail.com>
+Date: Sun, 17 Mar 2013 00:39:52 +0100
+Subject: Remove gemspec git ls-files
+
+---
+ wikicloth.gemspec |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/wikicloth.gemspec b/wikicloth.gemspec
+index 83f977d..42fdbaa 100644
+--- a/wikicloth.gemspec
++++ b/wikicloth.gemspec
+@@ -12,8 +12,8 @@ spec = Gem::Specification.new do |s|
+   s.homepage = "http://github.com/nricciar/wikicloth"
+   s.platform = Gem::Platform::RUBY
+   s.summary = "An implementation of the mediawiki markup in ruby"
+-  s.files = `git ls-files`.split("\n")
+-  s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
++#  s.files = `git ls-files`.split("\n")
++#  s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
+   s.require_path = "lib"
+   s.description = File.read("README")
+   s.has_rdoc = false

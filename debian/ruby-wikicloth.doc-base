@@ -1,0 +1,18 @@
+Document: ruby-wikicloth
+Title: Debian ruby-wikicloth Manual
+Author: David Ricciardi <nriccira@gmail.com>
+Abstract: MediaWiki markup language parser for Ruby
+ A parser for the MediaWiki markup language for Ruby.
+ .
+ Supports:
+  * Variables and Templates
+  * Links
+  * MediaWiki markup
+  * Disabling parsing markup
+  * References
+  * HTML sanitization
+Section: Programming/Ruby
+
+Format: HTML
+Index: /usr/share/doc/ruby-wikicloth/html/index.html
+Files: /usr/share/doc/ruby-wikicloth/html/*

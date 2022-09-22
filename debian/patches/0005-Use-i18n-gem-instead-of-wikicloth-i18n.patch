@@ -1,0 +1,22 @@
+From: Per Andersson <avtobiff@gmail.com>
+Date: Sat, 8 Jun 2013 20:34:19 +0200
+Subject: Use i18n gem instead of wikicloth/i18n
+
+Seems like wikicloth/i18n is broken.
+
+See http://github.com/nricciar/wikicloth/issues/61
+---
+ lib/wikicloth.rb |    2 ++
+ 1 file changed, 2 insertions(+)
+
+--- a/lib/wikicloth.rb
++++ b/lib/wikicloth.rb
+@@ -1,6 +1,8 @@
+ require 'rubygems' if RUBY_VERSION < '1.9'
+ require 'jcode' if RUBY_VERSION < '1.9'
+ require 'builder'
++# debian: use i18n, wikicloth/i18n seems broken
++require 'i18n'
+ # if i18n gem loaded use it instead
+ require File.join(File.expand_path(File.dirname(__FILE__)), "wikicloth", "i18n") unless defined?(I18n)
+ I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks) if defined?(I18n::Backend::Simple)

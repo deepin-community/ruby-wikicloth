@@ -1,0 +1,42 @@
+Source: ruby-wikicloth
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Per Andersson <avtobiff@debian.org>
+Build-Depends: bundler,
+               debhelper (>= 9~),
+               gem2deb,
+               rake,
+               ruby-activesupport,
+               ruby-builder,
+               ruby-expression-parser (>= 0.9.1-4~),
+               ruby-i18n,
+               ruby-rinku (>= 1.7.3-2~),
+               ruby-test-unit
+Standards-Version: 3.9.8
+Vcs-Git: https://anonscm.debian.org/git/pkg-ruby-extras/ruby-wikicloth.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/ruby-wikicloth.git
+Homepage: http://github.com/nricciar/wikicloth
+XS-Ruby-Versions: all
+
+Package: ruby-wikicloth
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: libjs-jquery,
+         ruby | ruby-interpreter,
+         ruby-builder,
+         ruby-expression-parser (>= 0.9.1-4~),
+         ruby-i18n,
+         ruby-rinku (>= 1.7.3-2~),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: MediaWiki markup language parser for Ruby
+ A parser for the MediaWiki markup language for Ruby.
+ .
+ Supports:
+  * Variables and Templates
+  * Links
+  * MediaWiki markup
+  * Disabling parsing markup
+  * References
+  * HTML sanitization

@@ -1,0 +1,46 @@
+ruby-wikicloth (0.8.1+dfsg-4) unstable; urgency=low
+
+  * Team upload.
+  
+  [ Per Andersson ]
+  * Replace custom upstream tarball repackaging with uscan(1) Files-Excluded.
+
+  [ Pirate Praveen ]
+  * Tighten dependencies (for gitlab)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 20 Jul 2016 18:32:05 +0530
+
+ruby-wikicloth (0.8.1+dfsg-3) unstable; urgency=low
+
+  * Team upload.
+
+  [Sebastien Badia]
+  * d/watch: Fall-back to Github (githubredir webservice was discontinued)
+
+  [Per Andersson]
+  * Bump Standards-Version to 3.9.6, no changes needed.
+  * Remove obsolete patches
+    - Comment out rubygems requires
+    - Explicit gem versioning
+    - Rearrange test/unit require
+  * Refresh patches
+    - Ignore code coverage test
+    - Use i18n gem instead of wikicloth i18n
+  * Changed to my @debian.org address.
+
+ -- Per Andersson <avtobiff@debian.org>  Fri, 09 Oct 2015 22:00:42 +0200
+
+ruby-wikicloth (0.8.1+dfsg-2) unstable; urgency=low
+
+  * Bump build depedency gem2deb >= 0.7.5~
+    - Rebuild for ruby 2.0 as default
+    - Documentation is not built for files anymore, only classes etc
+  * Add patch to Require wikicloth in examples
+
+ -- Per Andersson <avtobiff@gmail.com>  Mon, 07 Apr 2014 10:34:05 +0200
+
+ruby-wikicloth (0.8.1+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #703279)
+
+ -- Per Andersson <avtobiff@gmail.com>  Thu, 27 Feb 2014 02:59:08 +0100

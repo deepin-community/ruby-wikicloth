@@ -1,0 +1,10 @@
+FETCH NEW UPSTREAM SOURCE
+=========================
+
+Upstream ships the Wikipedia logo which is not DFSG free.
+
+In order to get a DFSG free tarball, just run uscan(1). This uses
+Files-Excluded in debian/copyright to repackage a DFSG free upstream tarball.
+
+--
+Per Andersson <avtobiff@debian.org>

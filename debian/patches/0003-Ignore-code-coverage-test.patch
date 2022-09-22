@@ -1,0 +1,47 @@
+From: Per Andersson <avtobiff@gmail.com>
+Date: Sun, 17 Mar 2013 00:46:01 +0100
+Subject: Ignore code coverage test
+
+---
+ Rakefile |   30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+--- a/Rakefile
++++ b/Rakefile
+@@ -11,21 +11,21 @@
+   test.verbose = true
+ end
+ 
+-if RUBY_VERSION =~ /^1\.9/
+-  require 'simplecov'
+-  desc "Code coverage detail"
+-  task :simplecov do
+-    ENV['COVERAGE'] = "true"
+-    Rake::Task['spec'].execute
+-  end
+-else
+-  require 'rcov/rcovtask'
+-  Rcov::RcovTask.new do |test|
+-    test.libs << 'test'
+-    test.pattern = 'test/**/test_*.rb'
+-    test.verbose = true
+-  end
+-end
++#if RUBY_VERSION =~ /^1\.9/
++#  require 'simplecov'
++#  desc "Code coverage detail"
++#  task :simplecov do
++#    ENV['COVERAGE'] = "true"
++#    Rake::Task['spec'].execute
++#  end
++#else
++#  require 'rcov/rcovtask'
++#  Rcov::RcovTask.new do |test|
++#    test.libs << 'test'
++#    test.pattern = 'test/**/test_*.rb'
++#    test.verbose = true
++#  end
++#end
+ 
+ task :default => :test
+ 
